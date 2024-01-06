@@ -4,4 +4,4 @@
 ### Day 3/90 Done
 ### Day 4/90 Done
 ### Day 5/90 Done
-### day 6/90 Done [Get % Post Method]
+### Day 6/90 Done [Get % Post Method]
