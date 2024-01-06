@@ -11,7 +11,6 @@ app.get("/api/users/:id", (req, res) => {
   const user = users.find((user) => user.id === id);
   return res.json(user);
 });
-
 app.get("/users", (req, res) => {
   const html = `<ul>
    ${users.map((users) => `<li> ${users.first_name}</li>`).join("")}
@@ -23,3 +22,4 @@ const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running at port ${PORT}`);
 });
+//I have to code
