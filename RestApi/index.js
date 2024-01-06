@@ -2,6 +2,9 @@ const express = require("express");
 const users = require("./MOCK_DATA.json");
 const app = express();
 
+//middleawre
+app.use(express.urlencoded({ extended: false }));
+
 app.get("/api/users", (req, res) => {
   return res.json(users);
 });
@@ -18,6 +21,13 @@ app.get("/users", (req, res) => {
   </ul>`;
   res.send(html);
 });
+
+app.post("/api/post", (req, res) => {
+  const body = req.body;
+  console.log(body);
+  return res.json({ status: "pending...!" });
+});
+
 const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running at port ${PORT}`);
