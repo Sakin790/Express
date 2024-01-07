@@ -1,5 +1,6 @@
 const express = require("express");
 const users = require("./MOCK_DATA.json");
+const fs = require("fs");
 const app = express();
 
 //middleawre
@@ -24,8 +25,12 @@ app.get("/users", (req, res) => {
 
 app.post("/api/post", (req, res) => {
   const body = req.body;
-  console.log(body);
-  return res.json({ status: "pending...!" });
+  const id = users.length + 1;
+  users.push({ ...body, id });
+  fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+    return res.json({ status: "Success", id });
+
+  });
 });
 
 const PORT = 8000;
