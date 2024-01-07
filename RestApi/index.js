@@ -29,13 +29,13 @@ app.post("/api/post", (req, res) => {
   users.push({ ...body, id });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
     return res.json({ status: "Success", id });
-
   });
 });
+
+
 
 const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running at port ${PORT}`);
 });
 
-// Github not working
