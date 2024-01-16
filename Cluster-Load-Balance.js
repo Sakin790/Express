@@ -28,6 +28,7 @@ if (cluster.isPrimary) {
 Load Balancer
 
 if to many request come to the server ther the the server may not work propery, in thst case we can use 
-Load Balencer  ,  
+Load Balencer  ,  Load Balancer depends on how many core you have , you can find your core using "OS" Module
+
 
 */
